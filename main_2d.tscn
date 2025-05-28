@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://degd72df5iq7k"]
 
-[ext_resource type="Texture2D" uid="uid://cug3n1ikhp6gf" path="res://DesignElements/night-sky-with-stars-and-clouds-cartoon-animation-relaxing-dark-skies-4k-motion-graphic-cloudy-evening-heaven-2d-animated-background-full-frame-after-hours-aesthetic-lofi-live-wallpaper-video.jpg" id="1_a68s1"]
+[ext_resource type="Texture2D" uid="uid://b2hl5e1wne5ub" path="res://DesignElements/test.jpg" id="1_8hhxv"]
 [ext_resource type="PackedScene" uid="uid://r0s4fwwhijad" path="res://Scenes/player_1.tscn" id="2_4l5f2"]
 [ext_resource type="PackedScene" uid="uid://4uupwgy35w7u" path="res://Scenes/player_two.tscn" id="3_8hhxv"]
 
@@ -9,8 +9,12 @@
 [node name="Background" type="TextureRect" parent="."]
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("1_a68s1")
+texture = ExtResource("1_8hhxv")
 
 [node name="Player1" parent="." instance=ExtResource("2_4l5f2")]
 
 [node name="PlayerTwo" parent="." instance=ExtResource("3_8hhxv")]
+
+[node name="Test" type="Sprite2D" parent="."]
+position = Vector2(1206, 1577)
+texture = ExtResource("1_8hhxv")

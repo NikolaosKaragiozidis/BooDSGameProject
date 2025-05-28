@@ -1,0 +1,15 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1748456814
+main_2d.tscn::PackedScene::7452644411571515786::1748456814::0::1::::<><><>0<>0<><>::uid://b2hl5e1wne5ub::::res://DesignElements/test.jpg<>uid://r0s4fwwhijad::::res://Scenes/player_1.tscn<>uid://4uupwgy35w7u::::res://Scenes/player_two.tscn
+README.md::TextFile/TextFile::-1::1748454021::0::1::::<><><>0<>0<><>::
+::res://DesignElements/::1748456859
+Obstacle.png::CompressedTexture2D/CompressedTexture2D::5874476333917323483::1748442102::1748442371::1::::<><><>0<>0<>a75b4ac0cfe9f668120bbc5fecdbf692<>res://.godot/imported/Obstacle.png-edb6c57891c9511174efb736e4c4696d.ctex::
+P1.png::CompressedTexture2D/CompressedTexture2D::8307701515857658391::1748442102::1748442371::1::::<><><>0<>0<>0516da002bede2429ebc7bc64f93a934<>res://.godot/imported/P1.png-843a2a0295b2dfe4e6f249413a2cbcd0.ctex::
+P2.png::CompressedTexture2D/CompressedTexture2D::1517351226784205698::1748442102::1748442371::1::::<><><>0<>0<>829a3a55ed01e6e43473cd75e7290c4f<>res://.godot/imported/P2.png-f2a6fcb2f95bc3eba167e4036d49ac04.ctex::
+test.jpg::CompressedTexture2D::4296691818211431505::1748455942::1748456860::1::::<><><>0<>0<>0d66ec26a974ba17ece5b0e9c0cb038e<>res://.godot/imported/test.jpg-4d0e8dfbad540fc7ff1077c8236bbeb3.ctex::
+::res://Scenes/::1748455961
+player_1.tscn::PackedScene/PackedScene::1245964777202789655::1748455961::0::1::::<><><>0<>0<><>::uid://bdbfm2p6g33nw::::res://Scripts/PlayerOneMovement.cs<>uid://dqmkvorhldil0::::res://DesignElements/P1.png
+player_two.tscn::PackedScene/PackedScene::2078006313259640284::1748455961::0::1::::<><><>0<>0<><>::uid://das8jabiqjuk8::::res://Scripts/PlayerTwoMovement.cs<>uid://vvas2j18wdje::::res://DesignElements/P2.png
+::res://Scripts/::1748455839
+PlayerOneMovement.cs::CSharpScript/CSharpScript::2599378049572118688::1748454636::0::1::::<>RigidBody2D<><>0<>0<><>::
+PlayerTwoMovement.cs::CSharpScript/CSharpScript::7198440585488862925::1748455839::0::1::::<>RigidBody2D<><>0<>0<><>::
