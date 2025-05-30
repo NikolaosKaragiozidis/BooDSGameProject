@@ -15,6 +15,7 @@ gravity_scale = 0.0
 lock_rotation = true
 linear_damp = 5.0
 script = ExtResource("1_p8sfr")
+boxSize = Vector2(70, 100)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = -1.5708

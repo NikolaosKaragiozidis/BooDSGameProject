@@ -7,6 +7,7 @@ public partial class PlayerOneMovement : RigidBody2D
 	// Εxport KEYWORD
 	
 	[Export] public float movementSpeed = 5000f;
+	[Export] public Vector2 boxSize = new Vector2(50, 30);
 	
 	// ΜΕΤΑΒΛΗΤΗ ΓΙΑ ΤΗΝ ΤΕΛΕΥΤΑΙΑ ΚΑΤΕΥΘΥΝΣΗ
 	
@@ -28,6 +29,8 @@ public partial class PlayerOneMovement : RigidBody2D
 		
 		detectArea = GetNode<Area2D>("DetectArea"); // ξανα, δεν χρειαζεται ακομα 
 		detectBox = detectArea.GetNode<ColorRect>("DetectBox");
+		
+		detectBox.Size = boxSize; // εφαρμογη του αλλαγμενου μεγεθους του κουτιου
 		
 		// βαζουμε αρχικο χρωμα στο κουτι
 		
