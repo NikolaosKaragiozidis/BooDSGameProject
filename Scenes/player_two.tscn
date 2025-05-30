@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://4uupwgy35w7u"]
+[gd_scene load_steps=5 format=3 uid="uid://4uupwgy35w7u"]
 
 [ext_resource type="Script" uid="uid://das8jabiqjuk8" path="res://Scripts/PlayerTwoMovement.cs" id="1_p8sfr"]
 [ext_resource type="Texture2D" uid="uid://vvas2j18wdje" path="res://DesignElements/P2.png" id="1_t6s2v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t6s2v"]
 size = Vector2(100, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p8sfr"]
+size = Vector2(58, 100)
 
 [node name="PlayerTwo" type="RigidBody2D"]
 position = Vector2(1440, 540)
@@ -19,3 +22,16 @@ texture = ExtResource("1_t6s2v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_t6s2v")
+
+[node name="DetectArea" type="Area2D" parent="."]
+position = Vector2(-50, 2)
+
+[node name="DetectBox" type="ColorRect" parent="DetectArea"]
+offset_left = -58.0
+offset_top = -52.0
+offset_bottom = 48.0
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectArea"]
+position = Vector2(-29, -2)
+shape = SubResource("RectangleShape2D_p8sfr")

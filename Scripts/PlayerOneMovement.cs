@@ -12,12 +12,26 @@ public partial class PlayerOneMovement : RigidBody2D
 	
 	private Vector2 lastDirection = Vector2.Right; // ΑΡΧΙΚΗ ΚΑΤΕΥΘΥΝΣΗ (ΔΕΞΙΑ ΓΙΑ PLAYER2)
 	
+	// Αρχικοποιηση μεταβλητων για υστερο reference των detection elements
+	
+	private Area2D detectArea; // δεν χρειαζεται για τη στιγμη αλλα καλο ειναι να υπαρχει
+	private ColorRect detectBox;
+	
 	// ΑΡΧΙΚΟΠΟΙΗΣΗ ΣΤΗΝ READY
 	
 	public override void _Ready()
 	{
 		LockRotation = false;  // ΕΠΙΤΡΕΠΟΥΜΕ ΠΕΡΙΣΤΡΟΦΗ
 		Rotation = lastDirection.Angle();  // ΑΡΧΙΚΗ ΠΕΡΙΣΤΡΟΦΗ
+		
+		// reference τα detection elements
+		
+		detectArea = GetNode<Area2D>("DetectArea"); // ξανα, δεν χρειαζεται ακομα 
+		detectBox = detectArea.GetNode<ColorRect>("DetectBox");
+		
+		// βαζουμε αρχικο χρωμα στο κουτι
+		
+		detectBox.Color = Colors.White;
 	}
 	
 	// KANOYME ΟVERRIDE ΤΑ PHYSICS ΤΟΥ ENGINE ΚΑΙ ΧΡΗΣΙΜΟΠΟΙΟΥΜΕ ΤΑ ΔΙΚΑ ΜΑΣ ΓΙΑ ΤΗ
@@ -51,6 +65,15 @@ public partial class PlayerOneMovement : RigidBody2D
 		// ΓΙΑ ΚΟΙΤΑΖΕΙ ΠΡΟΣ ΤΗΝ ΤΕΛΕΥΤΑΙΑ ΚΑΤΕΥΘΥΝΣΗ ΣΥΝΕΧΩΣ
 		
 		Rotation = lastDirection.Angle();
+		
+		// ελεγχος αν ο χρηστης παταει spacebar και αλλαγη χρωματος αναλογως
+		
+		if(Input.IsKeyPressed(Key.Space)){
+			detectBox.Color = Colors.Black;
+		}
+		else{
+			detectBox.Color = Colors.White;
+		}
 		
 		// ΤΕΛΙΚΗ ΕΦΑΡΜΟΓΗ ΔΥΝΑΜΕΩΝ ΣΤΟ ΚΕΝΤΡΟ ΤΟΥ RIGIDBODY ΑΝΑΛΟΓΩΣ ΚΑΤΕΥΘΥΝΣΗΣ ΠΟΥ ΕΔΩΣΕ
 		// Ο ΧΡΗΣΤΗΣ ΚΑΙ ΤΗΣ ΤΑΧΥΤΗΤΑΣ ΠΟΥ ΘΕΣΑΜΕ ΕΜΕΙΣ
